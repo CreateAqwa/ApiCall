@@ -1,0 +1,18 @@
+import requests
+import json
+url = "http://localhost:9000/ModelApi/v1/companies/"
+
+# { 'title': 'buy new mouse','body': 'I need to buy a new mouse !','userId': 5,}
+data = {
+        "name": "Syed2",
+        "location": "Delhi",
+        "about": "E About",
+        "type": "Mobile Phones",
+        "added_date": "2024-03-04",
+        "active": False
+}
+headers = {'content-type': 'application/json; charset=UTF-8'}
+
+response = requests.post(url, data=json.dumps(data), headers=headers)
+
+print(response.text)
