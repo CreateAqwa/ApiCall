@@ -22,5 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("home",Home),
     path("", views.home2),
+    path("ModelApi/v1/",include('ModelApi.views')),
     path("ModelApi/v1/",include('ModelApi.views'))
 ]
